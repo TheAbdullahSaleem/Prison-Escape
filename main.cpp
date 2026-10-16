@@ -79,11 +79,11 @@ int level_2(){
     std::cin >> guess;
     if (guess == answer)
     {
-        std::cout << "You escaped successfully";
+        std::cout << "You escaped successfully \n ";
         std::cout << "Maybe you are professional";
     }
     else{
-        std::cout << "You died";
+        std::cout << "You died \n ";
         std::cout << "Be careful tonight";
     }
     return 0;
