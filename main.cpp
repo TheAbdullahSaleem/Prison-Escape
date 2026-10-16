@@ -1,5 +1,6 @@
 #include <random>
 #include <iostream>
+#include <string>
 int start() {
     int guess;
     std::cout << "Welcome to Prison Escape"  <<  "\n";
@@ -64,10 +65,35 @@ int level_1(){
     return 0;
 }
 int level_2(){
-
+    int guess;
+    int answer = 3;
+    std::cout << "Welcome to Level 2 \n ";
+    std::cout << "Here you need to guess the right door between 3 \n ";
+    std::cout << "if you get it right you win but if you get it wrong .... \n ";
+    std::cout << "There are 3 doors \n ";
+    std::cout << "1 goes to escape door \n ";
+    std::cout << "other 2 go to ..... \n ";
+    std::cout << "1 , 2 and 3 \n ";
+    std::cout << "Good luck \n ";
+    std::cout << "Enter the guess :  ";
+    std::cin >> guess;
+    if (guess == answer)
+    {
+        std::cout << "You escaped successfully";
+        std::cout << "Maybe you are professional";
+    }
+    else{
+        std::cout << "You died";
+        std::cout << "Be careful tonight";
+    }
+    return 0;
 }
 int main() {
     start();
-    level_1();
+    int output = level_1();
+    if (output == 0)
+    {
+        level_2();
+    }
     return 0;
 }
